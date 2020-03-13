@@ -7,6 +7,11 @@
 	<a href="{% url 'displayall' %}" class="btn btn-primary btn-md" role="button">Display All</a>
 	
 </div>
+<br/>
+<div class="button-group">
+	<a href="{% url 'inputdata' %}" class="btn btn-primary btn-md" role="button">Input Data</a>
+	
+</div>
 <form action="{% url 'display_account' %}" metod="POST">
 	<label>Search for</label>
 	<input id="fulltext" type="text" name="fulltext">
@@ -21,8 +26,8 @@
 	<tr>
 		<th>Date</th>
 		<th>name</th>
-		<th>credit</th>
-		<th>debit</th>
+		<th>Payment</th>
+		<th>Bill</th>
 		
 	</tr>
 

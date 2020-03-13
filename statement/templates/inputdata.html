@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" action="{% url 'inputdata' %}">
+  {% csrf_token %}
+  <br/>
+  
+  
+  <h1>DATA ENTRY FORM</h1>
+
+  <div class="form-group">
+    
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name" name="name">
+    <br/>
+
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="PAYMENT" name="credit">
+    <br/>
+
+
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="BILL AMT" name="debit">
+    <br/>
+
+
+    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="date" name="date">
+    <br/>
+
+     <button type="submit" class="btn btn-primary">Submit</button>
+    
+  </div>
+{% endblock %}

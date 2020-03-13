@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from .forms import NameForm
+from .formstwo import dataform
 
 # Create your views here.
 def index(request):
@@ -22,3 +23,16 @@ def displayall(request):
 	'dataAll':dataAll
 	}
 	return render(request,'displayall.html',context)
+
+def inputdata(request):
+
+	if request.method=="POST":
+		form = dataform(request.POST or None)
+		if form.is_valid():
+			form.save()
+		return render(request,'inputdata.html',{})
+
+
+	else:
+		return render(request,'inputdata.html',{})
+	
